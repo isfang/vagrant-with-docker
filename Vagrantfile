@@ -29,6 +29,5 @@ Vagrant.configure(2) do |config|
       config.vm.network :private_network, ip: opts[:eth1]
     end
   end
-  config.vm.synced_folder "./labs", "/home/vagrant/labs"
   config.vm.provision "shell", privileged: true, path: "./setup.sh"
 end
